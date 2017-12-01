@@ -1,0 +1,31 @@
+default: &default
+  adapter: postgis
+  encoding: utf8
+  username: tester
+  password: test123
+  pool: 10
+  timeout: 5000
+  host: 120.55.125.107
+  port: 5432
+development:
+  <<: *default
+  database: ad_dev
+
+#test:
+#  <<: *default
+#  database: ad_test
+#
+production:
+ <<: *default
+ database: ad_dev
+
+# coupon_center:
+#   adapter: postgresql
+#   encoding: utf8
+#   pool: 5
+#   username: coupon_center
+#   password: coupon!13585753578
+#   timeout: 5000
+#   host: rm-2ze1ughopx71y014ro.pg.rds.aliyuncs.com
+#   port: 3432
+#   database: coupon_center_development
